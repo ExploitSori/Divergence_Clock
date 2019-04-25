@@ -1,0 +1,61 @@
+@font-face{
+	font-family:"BONX-Frame";
+	src:url("fonts/BONX-Frame.otf")format('opentype');
+}
+@font-face{
+	font-family:"BONX-Silhouette";
+	src:url("fonts/BONX-Silhouette.otf")format('opentype');
+}
+@font-face{
+	font-family:"BONX-Number";
+	src:url("fonts/BONX-Medium.otf")format('opentype');
+}
+#divergenceFrame {
+	font-family: BONX-Frame;
+	font-size: 20em;
+	color:#000000;
+	margin-top: -1em;
+	opacity:0.5;
+}
+#divergenceMeter {
+	font-family: BONX-Silhouette;
+	font-size: 20em;
+	color: #58120D;
+	margin-top:0em;
+}
+#divergenceNumber {
+	font-family: BONX-Number;
+	font-size: 20em;
+	color: #D9A600;
+	text-shadow: -3px 0 2px #eb2900, 0 3px 2px #eb2900, 3px 0 2px #eb2900, 0 -3px 2px #eb2900;
+	margin-top: -1em;
+}
+#divergenceFrameDate {
+	font-family: BONX-Frame;
+	font-size: 5em;
+	color:#000000;
+	margin-top: -1em;
+	opacity:0.8;
+}
+#divergenceMeterDate {
+	font-family: BONX-Silhouette;
+	font-size: 5em;
+	color: #58120D;
+	margin-top:0em;
+}
+#divergenceNumberDate {
+	font-family: BONX-Number;
+	font-size: 5em;
+	color: #D9A600;
+	text-shadow: -3px 0 2px #eb2900, 0 3px 2px #eb2900, 3px 0 2px #eb2900, 0 -3px 2px #eb2900;
+	margin-top: -1em;
+}
+body{
+	background-color: black;
+}
+#mainDiv {
+	width: 100%;
+    vertical-align: middle;
+    text-align: center;
+    margin-top: 15%;
+}

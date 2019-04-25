@@ -1,0 +1,63 @@
+<html>
+<link type ="text/css" rel="stylesheet" href="style.css">
+<div name="main" id="mainDiv">
+<div name="meter" id="divergenceMeter">
+	00 00 00
+</div>
+<div name="number" id="divergenceNumber">
+12:34:56
+</div>
+<div name="frame" id="divergenceFrame">
+	00 00 00
+</div>
+<br>
+<div name="meter" id="divergenceMeterDate">
+	0000000000.000
+</div>
+<div name="number" id="divergenceNumberDate">
+	2019-04-22.000
+</div>
+<div name="frame" id="divergenceFrameDate">
+	0000-MM-DD.000
+</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+
+const setDate = ()=>{
+
+	if(now.getMonth() <10)
+		var month = 0+""+(now.getMonth()+1)
+	else
+		var month = now.getMonth()+1
+	if(now.getDate()<10)
+		var day = "0"+now.getDate()
+	else
+		var day = now.getDate()
+	var target = now.getFullYear()+"-"+month+"-"+day+"."+(now+"").substr(0,3)
+	return target
+}
+const setTime= ()=>{
+	var time = now.getHours()+":"
+	if(now.getMinutes()<10)
+		time+="0"+now.getMinutes()
+	else
+		time+=now.getMinutes()
+	time+=":"
+	if(now.getSeconds()<10)
+		time+="0"+now.getSeconds()
+	else
+		time+=now.getSeconds()	
+	return time
+}
+const changes=()=>{
+	now = new Date()
+	$("#divergenceNumber").text(setTime())
+	$("#divergenceNumberDate").text(setDate())
+	let a= setTimeout(()=>{changes()},1000)
+}
+	
+	
+changes()
+</script>
+</html>

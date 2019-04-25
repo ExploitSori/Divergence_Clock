@@ -38,7 +38,10 @@ const setDate = ()=>{
 	return target
 }
 const setTime= ()=>{
-	var time = now.getHours()+":"
+	var time
+	time = now.getHours()+":"
+	if(time.length!==3)
+		time="0"+time
 	if(now.getMinutes()<10)
 		time+="0"+now.getMinutes()
 	else

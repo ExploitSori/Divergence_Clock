@@ -1,3 +1,3 @@
 # Divergence_Clock
 ### Sample
-```http://admin.noe.systems/```
+```https://exploitsori.github.io/Divergence_Clock/```
